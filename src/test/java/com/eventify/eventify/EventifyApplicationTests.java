@@ -1,4 +1,4 @@
-package ma.youcode.Eventify;
+package com.eventify.eventify;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
