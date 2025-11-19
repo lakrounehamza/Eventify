@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_db_container
+    environment:
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_DATABASE: eventify
+      MYSQL_USER: username
+      MYSQL_PASSWORD: userpassword
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+
+volumes:
+  db_data:
