@@ -1,6 +1,9 @@
 package com.eventify.eventify.dto.request;
 
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.FutureOrPresent;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,9 +15,8 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EventCreateRequest {
+public class EventUpdateRequest {
 
-    @NotBlank(message = "Title is required")
     @Size(max = 200)
     private String title;
 
@@ -22,11 +24,9 @@ public class EventCreateRequest {
 
     private String location;
 
-    @NotNull(message = "Date and time is required")
-    @FutureOrPresent(message = "Event date must be now or in the future")
+    @FutureOrPresent
     private LocalDateTime dateTime;
 
-    @NotNull
     @Min(1)
     @Max(10000)
     private Integer capacity;
