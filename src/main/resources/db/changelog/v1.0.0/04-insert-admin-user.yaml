@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2025-11-19-004-insert-default-admin
+      author: eventify-dev
+      runAlways: false
+      runOnChange: false
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: name
+                  value: "Super Administrator"
+              - column:
+                  name: email
+                  value: "admin@eventify.com"
+              - column:
+                  name: password
+                  value: "admin123"
+              - column:
+                  name: role
+                  value: "ROLE_ADMIN"
