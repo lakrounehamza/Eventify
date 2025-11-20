@@ -1,7 +1,7 @@
 databaseChangeLog:
   - include:
       file: v1.0.0/01-create-users-table.yaml
-      relativeToChangelogFile: false
+      relativeToChangelogFile: true
 #  - include:
 #      file:  classpath:db/changeLog/v1.0.0/02-create-events-table.yaml
 #  - include:
