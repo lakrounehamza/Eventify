@@ -1,0 +1,6 @@
+
+url: jdbc:mysql://localhost:3312/eventify
+username: my_user
+password: my_user_password
+driver-class-name: com.mysql.cj.jdbc.Driver
+changeLogFile: src/main/resources/db/changeLog/db.changelog-master.yaml
