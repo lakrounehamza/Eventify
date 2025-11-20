@@ -1,17 +1,8 @@
-services:
-  db:
-    image: mysql:8.0
-    container_name: mysql-container
-    environment:
-      MYSQL_ROOT_PASSWORD: your_root_password
-      MYSQL_DATABASE: eventify
-      MYSQL_USER: my_user
-      MYSQL_PASSWORD: my_user_password
-    ports:
-      - "3312:3306"
-    volumes:
-      - db_data:/var/lib/mysql
-    restart: always
-
-volumes:
-  db_data:
+container_name: mysql-container
+environment:
+  MYSQL_ROOT_PASSWORD: your_root_password
+  MYSQL_DATABASE: eventify
+  MYSQL_USER: my_user
+  MYSQL_PASSWORD: my_user_password
+ports:
+  - "3312:3306"
