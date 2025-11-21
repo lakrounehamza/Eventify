@@ -1,17 +1,22 @@
 package com.eventify.eventify.dto.request;
 
-import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-public class RegistrationCreateRequest {
-    @NotNull
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class RegistrationUpdateRequest {
     private UUID userId;
-    @NotNull
+
     private UUID eventId;
 
     private LocalDateTime registeredAt;
 
     private String status ;
+
 }
