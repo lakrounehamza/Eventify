@@ -32,7 +32,7 @@ public class User implements UserDetails {
     private String password;
 
     @Column(nullable = false, length = 20)
-    private Role role = Role.ROLE_USER; // ROLE_USER, ROLE_ORGANIZER, ROLE_ADMIN
+    private Role role = Role.ROLE_USER;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
