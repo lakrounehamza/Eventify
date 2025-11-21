@@ -8,12 +8,11 @@
               columns:
                 - column:
                     name: id
-                    type: BIGINT
-                    autoIncrement: true
+                    type: CHAR(36)
+                    defaultValue: UUID()
                     constraints:
                       primaryKey: true
                       primaryKeyName: pk_users
-                      nullable: false
                 - column:
                     name: name
                     type: VARCHAR(100)
@@ -37,11 +36,3 @@
                     defaultValue: "ROLE_USER"
                     constraints:
                       nullable: false
-
-          - createIndex:
-              tableName: users
-              indexName: idx_users_email
-              unique: true
-              columns:
-                - column:
-                    name: email
