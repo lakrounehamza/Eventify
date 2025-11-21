@@ -8,6 +8,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.time.Instant;
 import java.util.stream.Collectors;
 
 @RestControllerAdvice
@@ -22,6 +23,16 @@ public class GlobalExceptionHandler {
         response.setError(errors);
         response.setStatus(400);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
+    }
+    @ExceptionHandler(NotFoundException.class)
+    public  ResponseEntity<ErrorResponse>  handleNotFoundEception(NotFoundException e)
+    {
+        ErrorResponse response =  new ErrorResponse();
+        response.setStatus(404);
+        response.setMessage(e.getMessage());
+        response.setTimestamp(Instant.now());
+        return  ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+
     }
 
 }
