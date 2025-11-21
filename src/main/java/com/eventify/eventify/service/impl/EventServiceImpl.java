@@ -7,6 +7,7 @@ import com.eventify.eventify.entity.Event;
 import com.eventify.eventify.mapper.EventMapper;
 import com.eventify.eventify.repository.EventRepository;
 import com.eventify.eventify.service.EventService;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
