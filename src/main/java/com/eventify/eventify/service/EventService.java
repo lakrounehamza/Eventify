@@ -4,6 +4,7 @@ import com.eventify.eventify.dto.request.EventCreateRequest;
 import com.eventify.eventify.dto.request.EventUpdateRequest;
 import com.eventify.eventify.dto.response.EventResponse;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.UUID;
 
@@ -12,5 +13,5 @@ public interface EventService {
     public EventResponse getEventById(UUID id);
     public EventResponse update(UUID id , EventUpdateRequest eventRequest);
     public String  delete(UUID id);
-    public Page<EventResponse> getAll();
+    public Page<EventResponse> getAll(Pageable pageable);
 }
