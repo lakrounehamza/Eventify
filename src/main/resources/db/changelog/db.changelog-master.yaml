@@ -2,9 +2,12 @@ databaseChangeLog:
   - include:
       file: v1.0.0/01-create-users-table.yaml
       relativeToChangelogFile: true
-#  - include:
-#      file:  classpath:db/changeLog/v1.0.0/02-create-events-table.yaml
-#  - include:
-#      file:  classpath:db/changeLog/v1.0.0/03-create-registrations-table.yaml
+  - include:
+      file: v1.0.0/02-create-events-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: v1.0.0/03-create-registrations-table.yaml
+      relativeToChangelogFile: true
+
 #  - include:
 #      file:  classpath:db/changeLog/v1.0.0/04-insert-admin-user.yaml
